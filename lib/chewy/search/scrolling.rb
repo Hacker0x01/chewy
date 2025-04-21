@@ -32,6 +32,7 @@ module Chewy
 
         total_batches = total / batch_size
         last_batch_size = total % batch_size
+
         total_batches += 1 if last_batch_size != 0
 
         scroll_id = nil
