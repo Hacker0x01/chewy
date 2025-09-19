@@ -1,7 +1,10 @@
 begin
-  require 'method_source'
-  require 'parser/current'
-  require 'unparser'
+  # NOTE: We don't use witchcraft, so we don't want to rely on parser/current loading
+  # since that prints a warning on every application load. Otherwise we can revert this
+  # change whenever we need it.
+  #require 'method_source'
+  #require 'parser/current'
+  #require 'unparser'
 rescue LoadError
   nil
 end
